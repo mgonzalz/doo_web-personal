@@ -1,9 +1,6 @@
-<h1>Mi Web Personal</h1>
-<ul>
- <li><a href="/">Portada</a></li>
- <li><a href="/about/">Acerca de</a></li>
- <li><a href="/portfolio/">Portafolio</a></li>
- <li><a href="/contact/">Contacto</a></li>
-</ul>
-<h2>Acerca de</h2>
-<p>Me llamo Héctor y me encanta Django!</p>
+{% extends 'core/base.html' %}
+{% block title %}Acerca de{% endblock %}
+{% block content %}
+    <h2>Acerca de</h2>
+    <p>Me llamo Héctor y me encanta Django!</p>
+{% endblock %}
