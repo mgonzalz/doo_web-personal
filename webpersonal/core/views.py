@@ -11,7 +11,7 @@ html_base = """
 """
 
 def home(request):
-    return HttpResponse(html_base + """<h2>Bienvenidos</h2><p>Esto es la portada.</p>""")
+    return render(request, "core/home.html")
 def about(request):
     return HttpResponse(html_base + """<h2>Acerca de</h2><p>Me llamo Héctor y me encanta Django!</p>""")
 def contact(request):
