@@ -3,26 +3,31 @@
 {% load static %}
 {% block title %}Acerca de{% endblock %}
 
-{% block background %}{% static 'core/img/about-bg.jpg' %}{% endblock%}
+{% block background %}{% static 'core/img/about-me-bg.jpg' %}{% endblock%}
 {% block headers %}
-    <h1>Acerca de</h1>
+    <h1 style='font-size: 50px;'>Acerca de</h1>
     <span class="subheading">Biografía</span>
 {% endblock %}
 
 {% block content %}
     <div class="row">
         <div class="col-lg-3 col-md-4 offset-lg-1">
-            <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
+            <img class="img-fluid avatar" src="{% static 'core/img/profile-picture.jpg' %}" alt="">
         </div>
         <div class="col-lg-7 col-md-8">
-            <h2 class="section-heading">Juan Pérez</h2>
-            <p>
-                Nacido en... lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur
-                voluptates odit, fuga atque ea nobis sit soluta odio.
+            <h2 class="section-heading">María González</h2>
+            <p style="font-size: 17px; text-align: justify; ">
+                Estudiante de Ingeniería Matemática e Informática 
+                con sólidos conocimientos en análisis de datos, programación, 
+                desarrollo de algoritmos y modelado matemático. 
+                Experiencia en la coordinación de proyectos multidisciplinarios, 
+                utilizando herramientas avanzadas de análisis y software para la toma de decisiones basadas en datos.
             </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Saepe nostrum ullam eveniet pariatur voluptates odit...
+            <p style="font-size: 17px; text-align: justify;">
+                Capacidad para aplicar técnicas estadísticas y matemáticas 
+                en la resolución de problemas complejos, adaptándose rápidamente a nuevos desafíos y 
+                tecnologías emergentes. Comprometida con la excelencia técnica, el aprendizaje continuo 
+                y la innovación en la búsqueda de soluciones efectivas.
             </p>
         </div>
     </div>

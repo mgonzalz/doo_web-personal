@@ -2,14 +2,19 @@
 {% load static %}
 {% block title %}Portafolio{% endblock %}
 
-{% block background %}{% static 'core/img/portfolio-bg.jpg' %}{%endblock %}
+{% block background %}{% static 'core/img/portf-bg.jpg' %}{%endblock %}
 
 {% block headers %}
-    <h1>Portafolio</h1>
+    <h1 style = 'font-size: 40px;'>Portafolio</h1>
     <span class="subheading">Currículo</span>
 {% endblock %}
 
 {% block content %}
+    <p style="font-size: 17px; text-align: justify;">En esta sección, encontrarás algunos de los proyectos más destacados 
+        que he desarrollado durante mi carrera en Ingeniería Matemática e Informática. 
+        Cada proyecto refleja mi enfoque práctico para resolver problemas complejos mediante 
+        el uso de herramientas avanzadas en análisis de datos, programación y 
+        modelado matemático.</p>
     {% for project in projects %}
         <!-- Proyecto -->
             <div class="row project">
