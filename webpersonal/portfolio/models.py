@@ -1,5 +1,7 @@
 from django.db import models
-
+import os
+from django.db.models.signals import post_delete
+from django.dispatch import receiver
 # Create your models here.
 '''
 Representa una tabla dentro de la base de datos. Cada clase representa una tabla. Se deberán
@@ -17,5 +19,24 @@ class Project(models.Model): # Hereda de models.Model. El nombre SIEMPRE en sing
         verbose_name = "proyecto"
         verbose_name_plural = "proyectos"
         ordering = ["-created"] # Ordena los proyectos por fecha de creación de forma descendente.
+
+    def delete(self, *args, **kwargs):
+        if self.image:
+            if os.path.isfile(self.image.path):
+                os.remove(self.image.path)
+        super().delete(*args, **kwargs)
+
     def __str__(self):
         return self.title # Devuelve el título del proyecto como representación del objeto en la base de datos.
+
+
+
+
+@receiver(post_delete, sender=Project)
+def delete_image_on_object_delete(sender, instance, **kwargs):
+    """
+    Borra la imagen asociada cuando un objeto Project es eliminado.
+    """
+    if instance.image:
+        if os.path.isfile(instance.image.path):  # Verifica si la imagen existe en el sistema de archivos
+            os.remove(instance.image.path)
