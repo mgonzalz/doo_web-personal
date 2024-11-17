@@ -31,8 +31,9 @@ class TestProject(TestCase):
             link='https://example2.com'
         )
         projects = list(Project.objects.all())
-        self.assertEqual(projects[1], project2)
-        self.assertEqual(projects[0], self.project)
+        self.assertEqual(projects[0], project2)
+        self.assertEqual(projects[1], self.project)
+        project2.delete()
 
     
     def test_delete(self):
