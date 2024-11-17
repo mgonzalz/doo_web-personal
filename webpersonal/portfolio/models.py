@@ -8,7 +8,7 @@ de crear las columnas de la tabla. Cada columna será un atributo de la clase.
 class Project(models.Model): # Hereda de models.Model. El nombre SIEMPRE en singular.
     title = models.CharField(max_length=200, verbose_name="Título")
     description = models.TextField(verbose_name="Descripción")
-    image = models.ImageField(verbose_name="Imagen")
+    image = models.ImageField(verbose_name="Imagen", upload_to="projects")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
 
