@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core', # añadimos la app core a las aplicaciones instaladas, para que las Templates de la app core sean reconocidas
-    'portfolio'
+    'portfolio.apps.PortfolioConfig',
 ]
 
 MIDDLEWARE = [
