@@ -19,13 +19,14 @@ from django.urls import path
 
 from core import views
 from django.conf import settings
+from portfolio import views as portfolio_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
     path('about/', views.about, name="about"),
     path('contact/', views.contact, name="contact"),
-    path('portfolio/', views.portfolio, name="portfolio"),
+    path('portfolio/', portfolio_views.portfolio, name="portfolio"),
 ]
 
 
