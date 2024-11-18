@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core', # añadimos la app core a las aplicaciones instaladas, para que las Templates de la app core sean reconocidas
     'portfolio.apps.PortfolioConfig',
+    'experience.apps.ExperienceConfig',
 ]
 
 MIDDLEWARE = [

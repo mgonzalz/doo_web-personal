@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Experiencia{% endblock %}
+{% block background %}{% static 'core/img/portf-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1 style="font-size: 40px;">Experiencias</h1>
+    <span class="subheading">Currículo</span>
+{% endblock %}
+
+{% block content %}
+    <p style="font-size: 17px; text-align: justify;">
+        En esta sección, comparto algunas de las experiencias laborales más destacadas que he tenido a lo largo de mi carrera.
+        Cada experiencia refleja mi capacidad para enfrentar desafíos diversos, adaptarme a diferentes entornos de trabajo y colaborar 
+        de manera efectiva con equipos multidisciplinarios. A través de estos roles, he desarrollado habilidades clave en <b>comunicación</b>, 
+        <b>resolución de problemas</b> y <b>gestión del tiempo</b>, que me han permitido contribuir al éxito de los proyectos y alcanzar 
+        resultados positivos en diversas áreas profesionales.
+    </p>
+
+    {% for experience in experiences %}
+        <!-- Proyecto -->
+        <div class="row project">
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{ experience.image.url }}" alt="{{ experience.title }}">
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">{{ experience.title }}</h2>
+                <p>{{ experience.description }}</p>
+                <!-- Mostrar las fechas de inicio y fin -->
+                <p>
+                    <strong>Fecha de inicio:</strong> {{ experience.date_started|date:"F Y" }}<br>
+                    {% if experience.date_ended %}
+                        <strong>Fecha de finalización:</strong> {{ experience.date_ended|date:"F Y" }}
+                    {% else %}
+                        <strong>Actualmente</strong>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
