@@ -10,11 +10,16 @@
 {% endblock %}
 
 {% block content %}
-    <p style="font-size: 17px; text-align: justify;">En esta sección, encontrarás algunos de los proyectos más destacados 
-        que he desarrollado durante mi carrera en Ingeniería Matemática e Informática. 
-        Cada proyecto refleja mi enfoque práctico para resolver problemas complejos mediante 
-        el uso de herramientas avanzadas en análisis de datos, programación y 
-        modelado matemático.</p>
+    <p style="font-size: 20px; text-align: justify;">En esta sección, destaco mi <b>formación 
+        académica</b> y los <b>cursos</b> que he completado a lo largo de mi carrera profesional. 
+        Cada etapa educativa y cada capacitación han sido fundamentales para adquirir los 
+        conocimientos y habilidades necesarias para desempeñar mis funciones con excelencia. 
+        A través de estos estudios y programas de formación, he podido ampliar mi visión en 
+        diversas áreas, mejorar mis competencias y mantenerme actualizado en las tendencias 
+        y mejores prácticas de mi sector. Estas experiencias han complementado mi desarrollo 
+        profesional y me han preparado para enfrentar nuevos retos con una base sólida.
+
+    </p>
     {% for project in projects %}
         <!-- Proyecto -->
             <div class="row project">
@@ -23,7 +28,7 @@
                 </div>
                 <div class="col-lg-7 col-md-8">
                     <h2 class="section-heading title">{{project.title}}</h2>
-                    <p>{{project.description}}</p>
+                    <p style="font-size: 20px; text-align: justify;">{{project.description}}</p>
                     {% if project.link %}
                         <p><a href="{{project.link}}">Más información</a></p>
                     {% endif %}
