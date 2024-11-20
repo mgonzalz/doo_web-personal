@@ -21,6 +21,7 @@ from core import views
 from django.conf import settings
 from portfolio import views as portfolio_views
 from experience import views as experience_views
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,7 +32,4 @@ urlpatterns = [
     path('experiences/', experience_views.experiences, name="experiences"),
 ]
 
-
-if settings.DEBUG:
-    from django.conf.urls.static import static
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
