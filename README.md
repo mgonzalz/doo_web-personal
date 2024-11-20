@@ -1,8 +1,9 @@
 # Entrega Proyecto Web Personal.
-Este proyecto consiste en el desarrollo de una página web personal utilizando el framework **Django**. Incluye dos aplicaciones principales: `core` (para las funcionalidades generales) y `portfolio` (para la gestión de proyectos). Además, el proyecto está configurado con un workflow de GitHub Actions para la ejecución automática de los test.
+Este proyecto consiste en el desarrollo de una página web personal utilizando el framework **Django**. Incluye dos aplicaciones principales: `core` (para las funcionalidades generales) y `portfolio` (para la gestión de proyectos). Además, el proyecto está configurado con un workflow de **GitHub Actions** para la ejecución automática de los test, y ha sido desplegado en **Vercel,** lo que facilita su acceso y distribución.
 ## Repositorio.
 - Link: https://github.com/mgonzalz/doo_web-personal
 - Usuario: María González - [@mgonzalz](https://github.com/mgonzalz)
+- Despliegue en Vercel: https://doo-web-personal-mgonzalzs-projects.vercel.app/
 
 ## Estructura del proyecto.
 ```python
