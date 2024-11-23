@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  django:
+    image: webpersonal:0.0.1
+    build: .
+    ports:
+      - "8080:8080"  # Mapeo en el puerto 8080:8080
+

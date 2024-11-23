@@ -1,0 +1,38 @@
+# Ignore files and folders that are not necessary for the Docker image
+
+# Ignore editor configuration files (e.g., VSCode)
+.vscode/
+
+# Ignore the virtual environment (virtualenv)
+venv/
+env/
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore local database files
+db.sqlite3
+
+# Ignore log files
+*.log
+
+# Ignore dependency cache files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local configuration files (e.g., .env)
+.env
+
+# Ignore test folders
+tests/
+
+# Ignore system temporary files
+.DS_Store
+Thumbs.db
+
+# Ignore the media folder (used for local storage of media files)
+media/
